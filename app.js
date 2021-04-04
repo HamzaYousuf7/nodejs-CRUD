@@ -8,11 +8,16 @@ const notFoundRotes = require("./routes/NotFoundRoutes");
 // app start
 const app = express();
 
+// parsing the incoming req
+app.use(bodyParser.json());
+
+
 // handling all routes
 app.use("/api/product", productRouter);
 
 // 404 routes
 app.use(notFoundRotes);
+
 // error
 app.use((error, req, res, next) => {});
 

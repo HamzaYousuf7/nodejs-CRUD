@@ -9,7 +9,7 @@ const router = express.Router();
 // handling all the routes
 router.get("/", productController.getProducts);
 router.get("/:ID", productController.getProduct);
-router.post("/addProduct", productController.addProduct);
+router.post("/", productController.addProduct);
 router.put("/:ID", productController.updateProduct);
 router.delete("/:ID", productController.deleteProduct);
 
